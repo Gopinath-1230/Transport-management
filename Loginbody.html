@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .notification {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ffcc00;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification:hover {
+            background-color: #ffaa00;
+        }
+
+        .buttons-container {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="notification" onclick="showNotification()">
+        &#x1F514;
+    </div>
+    <div class="buttons-container">
+        <button onclick="location.href='route_management.html'">Route Management</button>
+        <button onclick="location.href='Add.html'">Add</button>
+        <button onclick="location.href='View.html'">View</button>
+        <button>Remove</button>
+    </div>
+
+    <script>
+        function showNotification() {
+            alert('You have new notifications!');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+        }
+
+        .title {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .photo {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .photo img {
+            border-radius: 8px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #007bff;
+        }
+
+        .details {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .details label {
+            font-size: 18px;
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .details input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h1>Bus Details</h1>
+    </div>
+    <div class="container">
+        <div class="photo">
+            <img src="bus_photo.jpg" alt="Bus Photo" />
+        </div>
+        <div class="details">
+            <form>
+                <label for="bus-number">Enter Bus Number:</label>
+                <input type="text" id="bus-number" name="bus-number" placeholder="Enter the bus number" required>
+
+                <label for="bus-id">Enter Bus ID:</label>
+                <input type="text" id="bus-id" name="bus-id" placeholder="Enter the bus ID" required>
+
+                <label for="rc">RC Details:</label>
+                <input type="text" id="rc" name="rc" placeholder="Enter RC details" required>
+
+                <label for="insurance">Insurance Details:</label>
+                <input type="text" id="insurance" name="insurance" placeholder="Enter insurance details" required>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
